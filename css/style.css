@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,400;1,700&display=swap');
+
+
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --white:#fff;
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+    --fuente-principal: 'Karla', sans-serif;
+
+}
+
+html {
+    font-size: 65.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+body{
+    background-color: var(--Light-Gray);
+    overflow: hidden;
+    font-family: var(--fuente-principal);
+}
+.wrapper {
+    max-width: 120rem;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.community{
+    min-width: 25rem;
+    box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.card_white{
+    background-color: var(--white);
+    border-radius: 1rem 1rem 0 0;
+    padding: 2rem;
+}
+
+.community_title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--Cyan);
+    margin: 0;
+    padding-top: 1rem;
+    
+}
+
+.card_white .community_text{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--Bright-Yellow);
+    padding: 2rem 0;
+
+}
+
+.community_text_white{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var( --Grayish-Blue);
+    line-height: 20pt; 
+    padding-bottom: 1rem;
+}
+.card_cyan{
+    background-color: hsl(179deg 62% 43% / 97%);
+    padding: 2rem;
+
+}
+
+.card_cyan .community_title{
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+.community_text_cyan span{
+    font-size: 3rem;
+    color: var(--white);
+    font-weight: 700;
+
+}
+.community_text_cyan{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: var(   --Light-Gray);
+}
+
+.card_cyan .community_text{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.community_button{
+    margin: 0;
+    background-color: var(--Bright-Yellow);
+    border-radius: .5rem;
+    padding: 1.5rem 2rem; 
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    margin: 2rem 0 1rem 0;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.card_yellow{
+    background-color: hsl(179deg 62% 43% / 84%);
+    padding: 2rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.card_yellow .community_title{
+    color: var(--white);
+}
+.card_yellow .community_text{
+    font-size: 1.6rem;
+    color: var(--Light-Gray);
+    font-weight: 500;
+    text-align: left;
+    padding: 2rem 0 1rem 0;
+    line-height: 18pt;
+    margin-right: 8.8rem;
+}
+
+
+
+
+@media (min-width: 768px) { 
+    .community{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 65rem;
+    }
+    
+    .community .community_card_grid:nth-child(1){
+        grid-column: 1/4;
+        grid-row: 1/2;
+       
+    }
+    
+    .community .community_card_grid:nth-child(2){
+        grid-column: 2/1;
+        grid-row: 2/2;
+    }
+    
+    .community .community_card_grid:nth-child(3){
+        grid-column: 2/3;
+        grid-row: 2/2;
+    }
+    .card_white{
+        padding: 3rem 9rem 3rem 4rem;
+    }
+    .card_cyan{
+        padding: 3rem;
+        border-radius: 0  0 0 1rem;
+
+    }
+    .community_button {
+        margin-top: 4rem;
+    }
+    .card_yellow{
+        padding: 3rem;
+        border-radius: 0 0 1rem 0;
+    }
+    .card_yellow .community_text {
+        margin-right: 7.5rem;
+    }
+  
+}
+
